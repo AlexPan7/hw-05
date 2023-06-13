@@ -1,0 +1,58 @@
+@import '../../assets/styles/mixin';
+
+.burgerBtn {
+  border: 0;
+  width: 2rem;
+  height: 2rem;
+  position: relative;
+  background: none;
+  cursor: pointer;
+  @include media('tablet') {
+    display: none;
+  }
+
+  span {
+    font-size: 0;
+    line-height: 0;
+  }
+
+  &::before,
+  &::after,
+  span {
+    content: '';
+    background: var(--white-color);
+    position: absolute;
+    height: 0.125rem;
+    width: 80%;
+    top: 50%;
+    left: 10%;
+    transition: all .3s ease;
+  }
+
+  &::before {
+    margin-top: -0.5rem;
+  }
+
+  &::after {
+    margin-top: 0.5rem;
+  }
+
+  &.opened {
+    span {
+      opacity: 0;
+    }
+
+    &::before,
+    &::after {
+      margin: -1px 0 0 -50%;
+      left: 50%;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+}

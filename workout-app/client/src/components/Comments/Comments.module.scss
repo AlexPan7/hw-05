@@ -1,0 +1,39 @@
+.commentsBlock {
+  border-top: 1px solid var(--white-color);
+  padding-top: 1rem;
+  margin-top: 3rem;
+
+  h2 {
+    color: var(--white-color);
+    margin: 0 0 1rem;
+  }
+
+  ul {
+    margin: 0 0 1rem;
+  }
+
+  textarea {
+    display: block;
+    color: var(--white-color);
+    background: transparent;
+    width: 100%;
+    resize: none;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.replysBlock {
+  border: 1px solid var(--primary-color);
+  padding: 1rem;
+
+  form {
+    margin-top: 2rem;
+  }
+}
+
+.replysComments {
+  border-top: 1px solid var(--primary-color);
+  padding-top: 1rem;
+  margin-top: 1rem;
+}

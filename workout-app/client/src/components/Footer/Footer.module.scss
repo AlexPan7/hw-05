@@ -1,0 +1,28 @@
+@import '../../assets/styles/mixin';
+
+.footer {
+  border-top: 1px solid rgba(255,255,255,0.67);
+  padding: 2rem 0;
+  margin-top: 4rem;
+  font-size: 0.65rem;
+  @include media('tablet') {
+    font-size: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.address {
+  font-style: normal;
+  margin: 0;
+}
+
+.info {
+  display: flex;
+  gap: 1rem;
+}
+
+.copy {
+  margin: 0;
+}

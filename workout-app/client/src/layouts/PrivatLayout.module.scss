@@ -1,0 +1,10 @@
+.main {
+  display: flex;
+  gap: 2rem;
+}
+
+.content {
+  padding: 2rem;
+  flex: 1;
+  background: var(--primary-color-100);
+}

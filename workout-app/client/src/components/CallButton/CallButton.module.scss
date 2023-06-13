@@ -1,0 +1,18 @@
+.callBtn {
+  position: fixed;
+  right: 0.5rem;
+  bottom: 0.5rem;
+  background: var(--primary-color);
+  border: 1px solid var(--acent-color);
+  padding: 0.25rem 0.5rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  z-index: 200;
+  color: var(--black-color);
+  font-size: 0.75rem;
+
+  &:hover {
+    color: var(--black-color);
+    background: var(--white-color);
+  }
+}

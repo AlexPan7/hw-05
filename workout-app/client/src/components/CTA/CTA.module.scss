@@ -1,0 +1,24 @@
+@import '../../assets/styles/mixin';
+
+.cta {
+  padding: 2rem;
+  background: var(--primary-color-100);
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+  @include media('tablet') {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.title {
+  font-weight: 600;
+  font-size: var(--text-xl);
+  line-height: 1.2;
+  color: var(--white-color);
+  margin: 0 0 2rem;
+  @include media('tablet') {
+    margin: 0 2rem 0 0;
+  }
+}

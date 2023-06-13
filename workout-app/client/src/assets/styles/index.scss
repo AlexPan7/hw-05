@@ -1,0 +1,37 @@
+@import 'vars';
+@import 'mixin';
+@import 'icons';
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--black-color);
+  color: var(--primary-color);
+  font: var(--text-base)/1.8125 'Poppins', Arial, Helvetica, sans-serif;
+}
+
+.light {
+  background: #ccc;
+  --primary-color: var(--black-color);
+  --secondary-color: var(--black-color);
+  --primary-color-100: var(--black-color);
+}
+
+#root {
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+a {
+  color: var(--white-color);
+  text-decoration: none;
+  
+  &:hover {
+    color: var(--acent-color-100);
+  }
+}

@@ -1,0 +1,44 @@
+@import '../../../assets/styles/mixin';
+
+.productDetail {
+  padding: 1rem 0;
+
+  h1 {
+    color: var(--white-color);
+    font-size: 2.2rem;
+    line-height: 1.1;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    @include media('tablet') {
+      font-size: 3rem;
+    }
+  }
+
+  p {
+    margin: 0 0 1.5rem;
+  }
+}
+
+.descr {
+  h1,h2,h3,h4,p {
+    margin-top: 0;
+    margin-bottom: 0.25rem;
+  }
+}
+
+.productimages {
+  columns: 2;
+  gap: 2rem;
+
+
+  @include media('tablet') {
+    columns: 3;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 2rem;
+  }
+}

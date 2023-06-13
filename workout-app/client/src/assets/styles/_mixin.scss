@@ -1,0 +1,17 @@
+@mixin media($value) {
+  @if $value == 'tablet' {
+    @media (min-width: 640px) {
+      @content;
+    }
+  }
+  @if $value == 'desktop' {
+    @media (min-width: 1024px) {
+      @content;
+    }
+  }
+  @if $value == 'widescreen' {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  }
+}

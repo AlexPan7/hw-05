@@ -1,0 +1,49 @@
+.form {
+  max-width: 600px;
+  margin-bottom: 4rem;
+}
+
+.formItem {
+  margin-bottom: 20px;
+}
+
+.formField {
+  background: none;
+  display: block;
+  width: 100%;
+  border: 1px solid rgba(255,255,255, 0.67);
+  border-width: 0 0 1px;
+  color: var(--white-color);
+  padding: 0.5rem 0;
+  font: 1rem 'Poppins', Arial, Helvetica, sans-serif;
+  resize: none;
+
+  &:focus {
+    border-color: var(--white-color);
+    outline: none;
+  }
+}
+
+.formSubmit {
+  border: 0;
+  background: var(--acent-color);
+  border-radius: 0.625rem;
+  display: inline-flex;
+  font-weight: 600;
+  font-size: var(--text-md);
+  line-height: 1.375;
+  letter-spacing: 0.0625rem;
+  color: var(--white-color);
+  padding: 0.5em 2.223em;
+  cursor: pointer;
+  transition: all .3s ease;
+
+  &:hover {
+    background: var(--white-color);
+    color: var(--acent-color);
+  }
+
+  @media (min-width: 640px) {
+    font-size: var(--text-lg);
+  }
+}

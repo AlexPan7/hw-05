@@ -1,0 +1,17 @@
+@import '../../../assets/styles/mixin';
+
+.postList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2.5rem;
+  
+  @include media('tablet') {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include media('desktop') {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

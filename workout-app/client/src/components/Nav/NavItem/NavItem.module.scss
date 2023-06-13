@@ -1,0 +1,30 @@
+@import '../../../assets/styles/mixin';
+
+
+
+.navLink {
+  text-transform: uppercase;
+  color: inherit;
+  text-decoration: none;
+  font-size: 0.75rem;
+  display: block;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid rgba(255,255,255,0.5);
+  @include media('tablet') {
+    padding: 0;
+    border: 0;
+  }
+
+  &:hover {
+    color: var(--white-color);
+  }
+}
+
+.navLinkActive {
+  color: var(--acent-color);
+  text-decoration: none;
+
+  &:hover {
+    color: var(--white-color);
+  }
+}

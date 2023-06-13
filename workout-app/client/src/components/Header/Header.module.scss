@@ -1,0 +1,58 @@
+@import '../../assets/styles/mixin';
+
+.header {
+  position: relative;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  padding: 1.5rem 0;
+  @include media('desktop') {
+    padding: 3.75rem 0;
+  }
+}
+
+.logoutBtn,
+.toggleThemeBtn {
+  text-transform: uppercase;
+  background: none;
+  padding: 0.75rem 1rem;
+  color: inherit;
+  border: 0;
+  cursor: pointer;
+  @include media('tablet') {
+    padding: 0;
+  }
+
+  &:hover {
+    color: var(--acent-color);
+  }
+
+  .light & {
+    background: #000;
+  }
+}
+
+.logoutBtn {
+  font-size: 0.75rem;
+  color: var(--acent-color);
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.userBar {
+  font-size: 0.75rem;
+
+  @include media('tablet') {
+    display: flex;
+  }
+}
+
+.divider {
+  margin: 0 0.5rem;
+  display: none;
+  @include media('tablet') {
+    display: block;
+  }
+}
