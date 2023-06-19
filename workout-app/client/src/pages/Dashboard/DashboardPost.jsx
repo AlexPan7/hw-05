@@ -46,17 +46,15 @@ export const DashboardPost = () => {
   };
 
   const handleSave = async (postId) => {
-    // Access the edited post data from editedPost state
     const updatedPostData = editedPost[postId];
 
     try {
-      // Make the PATCH request to update the post
       await axios.patch(`${BASE_URL}${postId}`, updatedPostData);
       fetchPosts();
-      setEditPostId(null); // Reset the edit state
+      setEditPostId(null);
       setEditedPost((prevEditedPost) => ({
         ...prevEditedPost,
-        [postId]: {}, // Clear the edited post data
+        [postId]: {},
       }));
     } catch (error) {
       console.error(error);
@@ -92,7 +90,7 @@ export const DashboardPost = () => {
       <tbody>
         {posts.data.map(({ _id, title, body, tag, categories, thumbnail }) => {
           const isEditing = editPostId === _id;
-          const editedData = editedPost[_id] || {}; // Access the edited post data for this post ID
+          const editedData = editedPost[_id] || {};
 
           return (
             <tr key={_id}>
@@ -113,7 +111,7 @@ export const DashboardPost = () => {
                 {isEditing ? (
                   <input
                     type="text"
-                    name="body" // Corrected the name attribute here
+                    name="body"
                     value={editedData.body || body}
                     onChange={(e) => handleInputChange(e, _id)}
                   />
