@@ -39,7 +39,11 @@ const sumAll = (arr: number[]): number => {
 console.log(sumAll([5,8,10]));
 
 //5
-const employeeInfo = (name: string, salary: number = null, ...skills: string[]): string => {
+const employeeInfo = (
+  name: string, 
+  salary: number | null = null, 
+  ...skills: string[]
+): string => {
   const getSkills = skills.join(',');
   return `Candidate ${name}, wants: ${salary}, knowledge: ${getSkills}`;
 };
@@ -53,7 +57,7 @@ const process = (value: number, callback: (value: number) => void) : void => {
   callback(value * 2);
 }
 
-const postToConsole = (value) : void => console.log(value);
+const postToConsole = (value: number) : void => console.log(value);
 
 process(15, postToConsole)
 

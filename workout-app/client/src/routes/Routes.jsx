@@ -3,7 +3,7 @@ import { createBrowserRouter } from 'react-router-dom';
 import AuthRoute from './AuthRoute';
 import PrivateRoute from './PrivateRoute';
 import { PublicLayout } from '../layouts';
-import { Home, About, Contact, Blog, NotFound, Login, Registration, Profile, Post, Dashboard, DashboardPost, DashboardSettings } from '../pages'
+import { Home, About, Contact, Blog, NotFound, Login, Registration, Profile, Post, Dashboard, DashboardPost } from '../pages'
 import PrivateLayout from '../layouts/PrivatLayout';
 
 export const routes = createBrowserRouter ([
@@ -67,10 +67,6 @@ export const routes = createBrowserRouter ([
           {
             path: '/dashboard/posts',
             element: <DashboardPost />
-          },
-          {
-            path: '/dashboard/settings',
-            element: <DashboardSettings />
           },
           {
             path: '/profile',
